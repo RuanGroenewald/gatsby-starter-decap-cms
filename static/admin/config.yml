@@ -246,6 +246,8 @@ collections:
                 ],
             }
       - file: "src/pages/image-gallery/image-gallery.md"
+        label: "Image Gallery"
+        name: "images"
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "image-gallery" }
           - { label: "Title", name: "title", widget: "string" }
