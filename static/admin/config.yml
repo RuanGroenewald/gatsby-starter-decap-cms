@@ -35,7 +35,7 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    create: true
+    create: false
     files:
       - file: "src/pages/index.md"
         label: "Landing Page"
@@ -244,4 +244,20 @@ collections:
                       ],
                   },
                 ],
+            }
+      - file: "src/pages/image-gallery/image-gallery.md"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "image-gallery" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Featured Image", name: "featuredimage", widget: "image" }
+          - {
+              label: "Images",
+              name: "images",
+              widget: "list",
+              fields: [
+                { label: "Image", name: "image", widget: "image" },
+                { label: "Alt Text", name: "alt", widget: "string" }
+              ]
             }
